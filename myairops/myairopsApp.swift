@@ -11,7 +11,9 @@ import SwiftUI
 struct myairopsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                Text("App")
+            }
         }
     }
 }

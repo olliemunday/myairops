@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		071302D829C1332F0041FBA4 /* myairopsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071302D729C1332F0041FBA4 /* myairopsApp.swift */; };
-		071302DA29C1332F0041FBA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071302D929C1332F0041FBA4 /* ContentView.swift */; };
 		071302DC29C133300041FBA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071302DB29C133300041FBA4 /* Assets.xcassets */; };
 		071302DF29C133300041FBA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071302DE29C133300041FBA4 /* Preview Assets.xcassets */; };
 		071302E929C133300041FBA4 /* myairopsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071302E829C133300041FBA4 /* myairopsTests.swift */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		071302D429C1332F0041FBA4 /* myairops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myairops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071302D729C1332F0041FBA4 /* myairopsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myairopsApp.swift; sourceTree = "<group>"; };
-		071302D929C1332F0041FBA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		071302DB29C133300041FBA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		071302DE29C133300041FBA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		071302E429C133300041FBA4 /* myairopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myairopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +92,10 @@
 		071302D629C1332F0041FBA4 /* myairops */ = {
 			isa = PBXGroup;
 			children = (
+				0713030329C133860041FBA4 /* types */,
+				0713030229C1337A0041FBA4 /* models */,
+				0713030129C133760041FBA4 /* views */,
 				071302D729C1332F0041FBA4 /* myairopsApp.swift */,
-				071302D929C1332F0041FBA4 /* ContentView.swift */,
 				071302DB29C133300041FBA4 /* Assets.xcassets */,
 				071302DD29C133300041FBA4 /* Preview Content */,
 			);
@@ -125,6 +125,27 @@
 				071302F429C133300041FBA4 /* myairopsUITestsLaunchTests.swift */,
 			);
 			path = myairopsUITests;
+			sourceTree = "<group>";
+		};
+		0713030129C133760041FBA4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0713030229C1337A0041FBA4 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		0713030329C133860041FBA4 /* types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071302DA29C1332F0041FBA4 /* ContentView.swift in Sources */,
 				071302D829C1332F0041FBA4 /* myairopsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.olliemunday.myairops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +483,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.olliemunday.myairops;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
