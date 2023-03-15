@@ -9,11 +9,24 @@ import SwiftUI
 
 @main
 struct myairopsApp: App {
+    @State private var tabSelected = 0
+
     var body: some Scene {
         WindowGroup {
-            TabView {
-                Text("App")
+            TabView(selection: $tabSelected) {
+                FlightsView(tabSelected: $tabSelected)
+                    .tag(0)
+                    .tabItem { TabViewItem(systemName: "airplane", text: "Flights") }
+
+                ContactsView(tabSelected: $tabSelected)
+                    .tag(1)
+                    .tabItem { TabViewItem(systemName: "phone", text: "Contacts") }
+
+                SettingsView(tabSelected: $tabSelected)
+                    .tag(2)
+                    .tabItem { TabViewItem(systemName: "gearshape", text: "Settings") }
             }
         }
     }
 }
+
